@@ -14,7 +14,7 @@ training_features, testing_features, training_target, testing_target = \
             train_test_split(features, tpot_data['target'], random_state=None)
 
 # Average CV score on the training set was: 0.9659420289855072
-exported_pipeline = ExtraTreesClassifier(bootstrap=False, criterion="gini", max_features=0.7500000000000001, min_samples_leaf=1, min_samples_split=19, n_estimators=100)
+exported_pipeline = ExtraTreesClassifier(bootstrap=True, criterion="entropy", max_features=0.8500000000000001, min_samples_leaf=13, min_samples_split=5, n_estimators=100)
 
 exported_pipeline.fit(training_features, training_target)
 
